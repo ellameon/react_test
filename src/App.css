@@ -9,6 +9,7 @@ grid-template-areas:
   grid-template-columns: 2fr 10fr;
   /*grid-gap: 10px;*/
 background-image: url("https://www.teahub.io/photos/full/141-1416915_download-the-hd-mi-noteglacier-wallpaper-xiaomi-nin.png");
+opacity: inherit;
 }
 
 .app-wrapper-content {
