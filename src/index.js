@@ -26,17 +26,12 @@ let posts = [
     {id: 2, message: 'It\'s my first post', likesCount: 20},
 ]
 
-export {posts}
-export {dialogs}
-export {messages}
-
 ReactDOM.render(
     <React.StrictMode>
-        <App/>
+        <App posts = {posts} dialogs = {dialogs} messages = {messages} />
     </React.StrictMode>,
     document.getElementById('root')
 );
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
