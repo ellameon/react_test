@@ -2,33 +2,38 @@ import React from "react";
 import s from './Dialogs.module.css'
 import {NavLink} from "react-router-dom";
 
+
+const DialogItem = (props) => {
+    let path = '/dialogs/' + props.id
+
+    return (
+        <div className={s.dialog + ' ' + s.active}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
+    )
+}
+
+const Message = (props) => {
+    return (
+    <div className= {s.message} >{props.message}</div>
+    )
+}
+
 const Dialogs = (props) => {
     return (
         <div className ={s.dialogs}>
             <div className={s.dialogItems}>
-                <div className={s.dialog + ' ' + s.active}>
-                    <NavLink to='/dialogs/1'>Leha</NavLink>
-                </div>
-                <div className= {s.dialog}>
-                    <NavLink to='/dialogs/2'>Roma</NavLink>
-                </div>
-                <div className= {s.dialog}>
-                    <NavLink to='/dialogs/3'>Anton</NavLink>
-                </div>
-                <div className= {s.dialog}>
-                    <NavLink to='/dialogs/4'>Pasha</NavLink>
-                </div>
-                <div className= {s.dialog}>
-                    <NavLink to='/dialogs/5'>Denis</NavLink>
-                </div>
-                <div className= {s.dialog}>
-                    <NavLink to='/dialogs/6'>Sasha</NavLink>
-                </div>
+                <DialogItem name = 'Leha' id = '1'/>
+                <DialogItem name = 'Roma' id = '2'/>
+                <DialogItem name = 'Anton' id = '3'/>
+                <DialogItem name = 'Pasha' id = '4'/>
+                <DialogItem name = 'Denis' id = '5'/>
+                <DialogItem name = 'Sasha' id = '6'/>
             </div>
             <div className= {s.messages}>
-                <div className= {s.message} > Hi</div>
-                <div className= {s.message}  > How is your IT?</div>
-                <div className= {s.message}  > Now</div>
+                <Message  message = 'Hi'/>
+                <Message  message = 'How is your IT?'/>
+                <Message  message = 'Now'/>
             </div>
         </div>
     )
