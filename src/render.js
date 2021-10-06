@@ -11,7 +11,7 @@ export let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <React.StrictMode>
             <BrowserRouter>
-                <App state={state} updateNewPostText = {updateNewPostText}/>
+                <App state={state} updateNewPostText = {updateNewPostText} addPost = {addPost}/>
             </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
