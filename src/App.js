@@ -9,7 +9,7 @@ import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import {BrowserRouter, Route} from "react-router-dom";
-import {addPost} from "./Redux/state";
+import store, {addPost} from "./Redux/state";
 
 
 const App = (props) => {
@@ -25,8 +25,8 @@ const App = (props) => {
                     <Route path='/profile'
                            render={() => <Profile
                                profilePage={props.state.profilePage}
-                               addPost = {props.addPost}
-                               updateNewPostText = {props.updateNewPostText}/>}/>
+                               addPost = {props.addPost.bind(store)}
+                               updateNewPostText = {props.updateNewPostText.bind(store)}/>}/>
                     <Route path='/dialogs'
                            render={() => <Dialogs
                                state={props.state.dialogsPage}
