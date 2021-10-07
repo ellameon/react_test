@@ -1,3 +1,7 @@
+const ADD_POST = 'ADD-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+
+
 let store = {
     _state: {
         profilePage: {
@@ -48,18 +52,18 @@ let store = {
         }
 
     },
-    getState () {
+    getState() {
         return this._state
     },
     _rerenderEntireTree() {
         console.log('State is changed')
     },
-    subscribe (observer)  {
+    subscribe(observer) {
         this._rerenderEntireTree = observer
     },
 
 
-    dispatch (action) {
+    dispatch(action) {
         if (action.type === 'ADD-POST') {
             let newPost = {
                 id: 5,
@@ -77,6 +81,13 @@ let store = {
     }
 
 }
+
+export const addPostActionCreator = () => ({type: ADD_POST})
+
+export const updateNewPostTextActionCreator = (text) => ({
+        type: UPDATE_NEW_POST_TEXT,
+        newText: text
+})
 
 export default store
 window.store = store
