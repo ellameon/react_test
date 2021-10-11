@@ -1,6 +1,6 @@
 
 import React from 'react'
-import Users from "./Users.jsx"
+import Users from './Users'
 import {connect} from "react-redux"
 import {followAC, setUsersAC, unfollowAC} from "../../Redux/UsersReducer.js"
 
