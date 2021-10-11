@@ -53,7 +53,7 @@ const dialogsReducer = (state = initialState, action) => {
             let body = state.newMessageBody
             return {
                 ...state,
-                newPostText: ' ',
+                newMessageBody: '',
                 messages: [...state.messages, {id: 6, message: body}]
             }
 

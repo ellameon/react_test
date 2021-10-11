@@ -14,6 +14,8 @@ let store = {
             ],
             newPostText: 'samurai'
         },
+
+
         dialogsPage: {
             messages: [
                 {id: 1, message: 'Hi'},
