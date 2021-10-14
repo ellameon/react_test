@@ -1,7 +1,7 @@
 import React from "react"
 import s from './ProfileInfo.module.css'
 import Preloader from "../../common/Preloader/Preloader";
-import {Redirect} from "react-router-dom";
+
 
 
 const ProfileInfo = (props) => {
@@ -9,7 +9,7 @@ const ProfileInfo = (props) => {
         return <Preloader />
 
     }
-    if(props.isAuth) return <Redirect to={'/login'}/>
+
     return (
         <div>
             <div>
